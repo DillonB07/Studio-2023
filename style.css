@@ -3,6 +3,10 @@
     --card-color: rgb(23, 23, 23);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 * {
     margin: 0;
     padding: 0;
