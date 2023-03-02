@@ -1,4 +1,4 @@
-document.getElementById("new-cards").onmousemove = e => {
+document.getElementsByClassName("new-cards").onmousemove = e => {
     for (const card of document.getElementsByClassName("card")) {
         const rect = card.getBoundingClientRect(),
             x = e.clientX - rect.left,
@@ -9,7 +9,7 @@ document.getElementById("new-cards").onmousemove = e => {
     };
 }
 
-document.getElementById("old-cards").onmousemove = e => {
+document.getElementsByClassName("old-cards").onmousemove = e => {
     for (const card of document.getElementsByClassName("card")) {
         const rect = card.getBoundingClientRect(),
             x = e.clientX - rect.left,
