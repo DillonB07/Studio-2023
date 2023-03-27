@@ -34,6 +34,8 @@ h2 {
 
 p {
 	font-size: 1.25em;
+	max-width: 800px;
+	line-height: 1.6rem;
 }
 
 body {
@@ -383,9 +385,10 @@ a:focus {
 
 
 #scroll-arrow {
-	width: 150px;
-	height: 150px;
+	width: 100px;
+	height: 100px;
 	bottom: 2vh;
+	margin-bottom: 2px;
 	position: fixed;
 	z-index: -1;
 }

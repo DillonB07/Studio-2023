@@ -2,54 +2,55 @@ console.log("Adding event listeners");
 console.log(document.getElementById("intro"));
 console.log(document.getElementById("scroll-arrow"));
 
-document.addEventListener("DOMContentLoaded", () => {
-  console.log("Adding event listeners");
-  console.log("intro", document.getElementById("intro"));
-  console.log("arrow", document.getElementById("scroll-arrow"));
+const container = document.querySelector(".container");
 
-  document.addEventListener("scroll", (event) => {
-    if (event.target === introSection || event.target === arrow) {
-      const rect = introSection.getBoundingClientRect();
-      if (rect.top < 0) {
-        arrow.style.display = "none";
-      } else {
-        arrow.style.display = "block";
-      }
+document.addEventListener("DOMContentLoaded", () => {
+  container.addEventListener("scroll", (event) => {
+    const introSection = document.getElementById("intro");
+    const arrow = document.getElementById("scroll-arrow");
+    console.info(introSection, arrow);
+
+    const rect = introSection.getBoundingClientRect();
+    console.info(rect);
+    if (rect.top < 0) {
+      arrow.style.display = "none";
+    } else {
+      arrow.style.display = "block";
     }
   });
-  
-  document.getElementsByClassName("new-cards").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("card")) {
+
+  document.querySelector(".new-cards").addEventListener("mousemove", (e) => {
+    document.querySelectorAll(".card").forEach((card) => {
       const rect = card.getBoundingClientRect(),
         x = e.clientX - rect.left,
         y = e.clientY - rect.top;
 
       card.style.setProperty("---mouse-x", `${x}px`);
       card.style.setProperty("--mouse-y", `${y}px`);
-    }
-  };
+    });
+  });
 
-  document.getElementsByClassName("old-cards").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("card")) {
+  document.querySelector(".old-cards").addEventListener("mousemove", (e) => {
+    document.querySelectorAll(".card").forEach((card) => {
       const rect = card.getBoundingClientRect(),
         x = e.clientX - rect.left,
         y = e.clientY - rect.top;
 
-      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("---mouse-x", `${x}px`);
       card.style.setProperty("--mouse-y", `${y}px`);
-    }
-  };
+    });
+  });
 
-  document.getElementById("contact-cards").onmousemove = (e) => {
-    for (const card of document.getElementsByClassName("contact-icon")) {
+  document.querySelector(".conmtact-cards").addEventListener("mousemove", (e) => {
+    document.querySelectorAll(".contact-icon").forEach((card) => {
       const rect = card.getBoundingClientRect(),
         x = e.clientX - rect.left,
         y = e.clientY - rect.top;
 
-      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("---mouse-x", `${x}px`);
       card.style.setProperty("--mouse-y", `${y}px`);
-    }
-  };
+    });
+  });
 
   // Add a event listener to detect when the user isn't on the intro section and hide the arrow image
 });
