@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  document.querySelector(".conmtact-cards").addEventListener("mousemove", (e) => {
+  document.querySelector(".contact-cards").addEventListener("mousemove", (e) => {
     document.querySelectorAll(".contact-icon").forEach((card) => {
       const rect = card.getBoundingClientRect(),
         x = e.clientX - rect.left,
