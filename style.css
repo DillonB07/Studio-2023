@@ -382,7 +382,7 @@ a:focus {
 }
 
 
-.scroll-arrow {
+#scroll-arrow {
 	width: 150px;
 	height: 150px;
 	bottom: 2vh;
