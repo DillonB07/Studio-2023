@@ -380,3 +380,12 @@ a:focus {
 .contact-icon:focus-visible {
 	outline: solid 1px #f2ec80;
 }
+
+
+.scroll-arrow {
+	width: 150px;
+	height: 150px;
+	bottom: 2vh;
+	position: fixed;
+	z-index: -1;
+}

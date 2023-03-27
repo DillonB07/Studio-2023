@@ -30,3 +30,4 @@ document.getElementById("contact-cards").onmousemove = e => {
         card.style.setProperty("--mouse-y", `${y}px`);
     };
 }
+
