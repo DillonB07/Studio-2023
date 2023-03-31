@@ -54,7 +54,6 @@ section {
   padding: 100px 15vw;
   height: 100vh;
   scroll-snap-align: start;
-  border: 0.5px solid black;
 }
 
 .container {
