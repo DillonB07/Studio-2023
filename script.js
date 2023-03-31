@@ -1,17 +1,11 @@
-console.log("Adding event listeners");
-console.log(document.getElementById("intro"));
-console.log(document.getElementById("scroll-arrow"));
-
 const container = document.querySelector(".container");
 
 document.addEventListener("DOMContentLoaded", () => {
   container.addEventListener("scroll", (event) => {
     const introSection = document.getElementById("intro");
     const arrow = document.getElementById("scroll-arrow");
-    console.info(introSection, arrow);
 
     const rect = introSection.getBoundingClientRect();
-    console.info(rect);
     if (rect.top < 0) {
       arrow.style.display = "none";
     } else {
