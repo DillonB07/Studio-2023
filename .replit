@@ -180,3 +180,4 @@ pattern = "**/{*.less,*.scss,*.css}"
 [deployment]
 build = ["sh", "-c", "vite build"]
 run = ["sh", "-c", "vite preview"]
+ignorePorts = false
