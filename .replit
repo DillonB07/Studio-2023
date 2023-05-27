@@ -1,6 +1,6 @@
 run = "vite"
 entrypoint = "index.html"
-hidden = ["vite.config.js", ".config"]
+hidden = ["vite.config.js", ".config", "yarn.lock"]
 
 [nix]
 channel = "stable-21_11"
